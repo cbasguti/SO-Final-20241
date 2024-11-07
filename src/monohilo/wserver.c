@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include "request.h"
 #include "io_helper.h"
+#include <bits/getopt_core.h>
 
 char default_root[] = ".";
 
@@ -44,13 +45,12 @@ int main(int argc, char *argv[]) {
 
         // Extraer el archivo solicitado
         char file_path[512];
-        sscanf(request, "GET /%s ", file_path);
-
-        // Si no se especifica un archivo, servir index.html
-        if (strcmp(file_path, "") == 0) {
-            strcpy(file_path, "index.html");
+        if (strncmp(request, "GET / ", 6) == 0) {
+            strcpy(file_path, "index.html");  // Asignar index.html si la solicitud es para la raíz
+        } else {
+            sscanf(request, "GET /%s ", file_path);  // Extraer el archivo solicitado
         }
-
+        
         // Determinar el tipo de contenido
         const char *content_type = "text/html";
         if (strstr(file_path, ".css")) {
