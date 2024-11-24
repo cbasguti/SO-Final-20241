@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Connections</title>
+    <script>
+        async function updateConnections() {
+            try {
+                const response = await fetch('/connections');
+                const data = await response.json();
+                
+                // Limpiar el contenedor antes de agregar los nuevos puntos
+                const connectionContainer = document.getElementById('connections');
+                connectionContainer.innerHTML = '';
+
+                // Agregar un punto por cada conexión
+                for (let i = 0; i < data.connections; i++) {
+                    const dot = document.createElement('span');
+                    dot.innerHTML = '&#9679; '; // Punto negro
+                    connectionContainer.appendChild(dot);
+                }
+            } catch (err) {
+                console.error('Error al actualizar las conexiones:', err);
+            }
+        }
+
+        // Actualizar las conexiones cada segundo
+        setInterval(updateConnections, 100); 
+    </script>
+</head>
+<body>
+    <h1>Conexiones al servidor</h1>
+    <div id="connections"></div>
+</body>
+</html>
