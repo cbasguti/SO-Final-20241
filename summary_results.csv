@@ -1,0 +1,13 @@
+File Name,Concurrency Level,Requests per second,Time per request (ms),Transfer rate (Kbytes/sec)
+results_multihilo_100.txt,100,13334.04,7.5,263933.35
+results_monohilo_200.txt,200,6279.91,31.848,124298.02
+results_monohilo_10.txt,10,6659.34,1.502,131808.14
+results_monohilo_1000.txt,1000,5198.78,192.353,102899.19
+results_multihilo_200.txt,200,12174.19,16.428,240975.22
+results_multihilo_1000.txt,1000,7490.19,133.508,148260.37
+results_multihilo_50.txt,50,15517.59,3.222,307154.31
+results_monohilo_50.txt,50,6692.99,7.47,132474.19
+results_monohilo_500.txt,500,5343.54,93.571,105764.44
+results_multihilo_500.txt,500,12526.31,39.916,247945.0
+results_monohilo_100.txt,100,6296.75,15.881,124631.44
+results_multihilo_10.txt,10,13042.4,0.767,258160.57

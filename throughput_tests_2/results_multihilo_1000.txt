@@ -12,31 +12,31 @@ Server Port:            15000
 Document Path:          /index.html
 Document Length:        19725 bytes
 
-Concurrency Level:      1000
-Time taken for tests:   0.129 seconds
+Concurrency Level:      1
+Time taken for tests:   0.345 seconds
 Complete requests:      1000
 Failed requests:        0
 Total transferred:      19769000 bytes
 HTML transferred:       19725000 bytes
-Requests per second:    7776.84 [#/sec] (mean)
-Time per request:       128.587 [ms] (mean)
-Time per request:       0.129 [ms] (mean, across all concurrent requests)
-Transfer rate:          150136.98 [Kbytes/sec] received
+Requests per second:    2900.10 [#/sec] (mean)
+Time per request:       0.345 [ms] (mean)
+Time per request:       0.345 [ms] (mean, across all concurrent requests)
+Transfer rate:          55988.31 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0   21   3.0     21      25
-Processing:    40   67  13.2     66      89
-Waiting:        0   66  13.7     66      89
-Total:         40   87  10.4     87     105
+Connect:        0    0   0.0      0       0
+Processing:     0    0   0.1      0       1
+Waiting:        0    0   0.0      0       0
+Total:          0    0   0.1      0       1
 
 Percentage of the requests served within a certain time (ms)
-  50%     87
-  66%     93
-  75%     95
-  80%     97
-  90%    104
-  95%    104
-  98%    104
-  99%    104
- 100%    105 (longest request)
+  50%      0
+  66%      0
+  75%      0
+  80%      0
+  90%      0
+  95%      1
+  98%      1
+  99%      1
+ 100%      1 (longest request)
